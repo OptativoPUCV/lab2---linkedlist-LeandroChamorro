@@ -265,3 +265,20 @@ list.c:148:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 e27c109
+Fri 24 Mar 2023 06:20:55 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:147:20: error: expected ‘;’ before ‘}’ token
+  147 |   free(removerNodo)
+      |                    ^
+      |                    ;
+  148 | }
+      | ~                   
+list.c:148:1: error: control reaches end of non-void function [-Werror=return-type]
+  148 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+2b59cf9
