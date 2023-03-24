@@ -124,7 +124,7 @@ void * popCurrent(List * list) {
   {
     list->head = NULL;
     list->tail = NULL;
-      list->current = NULL; 
+    list->current = NULL; 
   }
   else if (removerNodo ==list->head)
   {
@@ -140,11 +140,11 @@ void * popCurrent(List * list) {
   }
   else
   {
-    removerNodo->prev->next = removerNodo->prev;
-    removerNodo->next->prev = removerNodo->next;
+    removerNodo->prev->next = removerNodo->next;
+    removerNodo->next->prev = removerNodo->prev;
     list->current = removerNodo->next;
   }
-
+  return data;
 }
 
 void cleanList(List * list) {
