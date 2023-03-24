@@ -33,3 +33,28 @@ list.c:44:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 b2dc0a3
+Fri 24 Mar 2023 05:28:04 PM UTC: 
+ list.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:45:18: error: ‘head’ undeclared (first use in this function)
+   45 |   list->current =head->data;
+      |                  ^~~~
+list.c:45:18: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘nextList’:
+list.c:50:20: error: assignment to ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   50 |   if(list->current = NULL || list->current->next == NULL)
+      |                    ^
+list.c:50:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   50 |   if(list->current = NULL || list->current->next == NULL)
+      |      ^~~~
+list.c:53:3: error: ‘listcurrent’ undeclared (first use in this function)
+   53 |   listcurrent-> = list->current->next;
+      |   ^~~~~~~~~~~
+list.c:53:17: error: expected identifier before ‘=’ token
+   53 |   listcurrent-> = list->current->next;
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+5712da6
