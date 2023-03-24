@@ -120,6 +120,7 @@ void * popCurrent(List * list) {
   if (list->current ==NULL) 
      return NULL;
   Node* removerNodo = list->current;
+  void* data = removerNodo->data;
   if(removerNodo == list->head && removerNodo == list->tail)
   {
     list->head = NULL;
