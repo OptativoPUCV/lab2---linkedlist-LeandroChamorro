@@ -125,3 +125,9 @@ list.c:53:3: error: ‘listcurrent’ undeclared (first use in this function)
 list.c:53:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 e67b6df
+Fri 24 Mar 2023 05:31:07 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|4
+total_score: 25/70
+e373075
