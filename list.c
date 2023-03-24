@@ -144,6 +144,7 @@ void * popCurrent(List * list) {
       removerNodo->prev->next = removerNodo->prev;
       list->current = removerNodo->next;
   }
+  free(removerNodo)
 }
 
 void cleanList(List * list) {
