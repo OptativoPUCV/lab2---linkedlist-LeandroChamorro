@@ -42,7 +42,7 @@ void * firstList(List * list) {
     
     return NULL;
       
-  list->current =head->data;
+  list->current =list->head;
   return list->head->data;
 }
 
