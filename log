@@ -4,3 +4,32 @@ Fri 24 Mar 2023 05:22:40 PM UTC:
  tests:  1|5
 total_score: 10/70
 281e1ae
+Fri 24 Mar 2023 05:27:09 PM UTC: 
+ list.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:43:18: error: ‘head’ undeclared (first use in this function)
+   43 |   list->current =head->data;
+      |                  ^~~~
+list.c:43:18: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘nextList’:
+list.c:47:20: error: assignment to ‘Node *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   47 |   if(list->current = NULL || list->current->next == NULL)
+      |                    ^
+list.c:47:6: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   47 |   if(list->current = NULL || list->current->next == NULL)
+      |      ^~~~
+list.c:50:3: error: ‘listcurrent’ undeclared (first use in this function)
+   50 |   listcurrent-> = list->current->next;
+      |   ^~~~~~~~~~~
+list.c:50:17: error: expected identifier before ‘=’ token
+   50 |   listcurrent-> = list->current->next;
+      |                 ^
+list.c: In function ‘firstList’:
+list.c:44:1: error: control reaches end of non-void function [-Werror=return-type]
+   44 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+b2dc0a3
