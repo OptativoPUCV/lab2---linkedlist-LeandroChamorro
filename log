@@ -114,3 +114,14 @@ list.c:53:17: error: expected identifier before ‘=’ token
       |                 ^
 Compilation failed
 d13c9ea
+Fri 24 Mar 2023 05:30:56 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:53:3: error: ‘listcurrent’ undeclared (first use in this function)
+   53 |   listcurrent->current = list->current->next;
+      |   ^~~~~~~~~~~
+list.c:53:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+e67b6df
