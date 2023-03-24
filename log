@@ -211,3 +211,17 @@ list.c:99:15: error: assignment to ‘Node *’ from incompatible pointer type �
 cc1: all warnings being treated as errors
 Compilation failed
 efa30d2
+Fri 24 Mar 2023 06:03:27 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:90:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   90 |   else
+      |   ^~~~
+list.c:92:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   92 |     newNode->next = list->current;
+      |     ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f2c5e52
