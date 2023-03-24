@@ -140,11 +140,11 @@ void * popCurrent(List * list) {
   }
   else
   {
-    removerNodo->prev->next = removerNodo->next;
-    removerNodo->next->prev = removerNodo->prev;
+    removerNodo->prev->next = removerNodo->prev;
+    removerNodo->next->prev = removerNodo->next;
     list->current = removerNodo->next;
   }
-free(removerNodo);
+
 }
 
 void cleanList(List * list) {
