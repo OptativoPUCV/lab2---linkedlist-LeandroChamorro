@@ -135,7 +135,7 @@ void * popCurrent(List * list) {
   }
   else if (removerNodo == list->tail)
   {
-    list->tail = removerNodo->next;
+    list->tail = removerNodo->prev;
     list->tail->prev = NULL;
     list->current = NULL;
   }
