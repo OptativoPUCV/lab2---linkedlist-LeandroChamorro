@@ -169,3 +169,45 @@ list.c:92:5: note: ...this statement, but the latter is misleadingly indented as
 cc1: all warnings being treated as errors
 Compilation failed
 19b18b9
+Fri 24 Mar 2023 06:03:10 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:88:1: error: unknown type name ‘node’; did you mean ‘Node’?
+   88 | node* newNode = createNode(data);
+      | ^~~~
+      | Node
+list.c:88:17: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+   88 | node* newNode = createNode(data);
+      |                 ^~~~~~~~~~
+list.c:91:12: error: request for member ‘next’ in something not a structure or union
+   91 |     newNode->next = list->current->next;
+      |            ^~
+list.c:90:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   90 |   else
+      |   ^~~~
+list.c:92:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   92 |     newNode->next = list->current;
+      |     ^~~~~~~
+list.c:92:12: error: request for member ‘next’ in something not a structure or union
+   92 |     newNode->next = list->current;
+      |            ^~
+list.c:95:35: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   95 |         list->current->next->prev = newNode;
+      |                                   ^
+list.c:96:25: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   96 |     list->current->next = newNode;
+      |                         ^
+list.c:97:17: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   97 |   list->current = newNode;
+      |                 ^
+list.c:98:13: error: request for member ‘next’ in something not a structure or union
+   98 |   if(newNode->next == NULL)
+      |             ^~
+list.c:99:15: error: assignment to ‘Node *’ from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   99 |     list->tail=newNode;
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+efa30d2
