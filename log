@@ -150,3 +150,22 @@ Fri 24 Mar 2023 05:33:48 PM UTC:
  tests:  9|3
 total_score: 35/70
 0e51619
+Fri 24 Mar 2023 06:02:39 PM UTC: 
+ list.c | 33 +++++++++++++++++++++++++++++++--
+ 1 file changed, 31 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:91:5: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+   91 |     newNode->next = list->current->next;
+      |     ^~~~~~~
+      |     Node
+list.c:91:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:90:3: error: this ‘else’ clause does not guard... [-Werror=misleading-indentation]
+   90 |   else
+      |   ^~~~
+list.c:92:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   92 |     newNode->next = list->current;
+      |     ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+19b18b9
